@@ -10,6 +10,7 @@ public class Aerolinea {
         Catalogo vercatalogo=new Catalogo();
         Companhia vercompanhia=new Companhia();
          Scanner numper=new Scanner(System.in);
+         /*
         int num;
         System.out.println("BIENVENIDO");
          System.out.println("QUE DESEA INGRESAR AL SISTEMA");
@@ -19,8 +20,9 @@ public class Aerolinea {
            System.out.println("4-COMPAÑIA");
             System.out.println("5-SALIR");
           num=numper.nextInt();
+        
           if (num==1){
-              registrarUsuario.registrarUsuario();
+              
           }else if(num==2){
          registarBoletos.registrarBoleto();
           }else if(num==3){
@@ -31,7 +33,7 @@ public class Aerolinea {
             System.out.println("GRACIAS POR USUAR NUESTROS SERVIVIOS");
                System.exit(0);
         }
-        
+        */
         
     }
 }

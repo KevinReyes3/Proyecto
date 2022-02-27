@@ -1,9 +1,12 @@
+package Formularios;
+
 
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -15,7 +18,10 @@ import javax.swing.JLabel;
  * @author KevinR
  */
 public class Registro extends javax.swing.JFrame {
-
+    String User="admin";
+    String Contrasena="admin";
+  
+    
     private ImageIcon imagen;
     private Icon icono;
     public Registro() {
@@ -23,6 +29,7 @@ public class Registro extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.Imagen(this.jLabelsesion, "src/imagenes/sesion2.png");
         this.Imagenboton(this.jButtonIniciar, "src/imagenes/login1.png");
+        
         
     }
 
@@ -36,11 +43,11 @@ public class Registro extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabelsesion = new javax.swing.JLabel();
+        pass = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextFieldUser = new javax.swing.JTextField();
-        jPassword = new javax.swing.JPasswordField();
+        txtuser = new javax.swing.JTextField();
         jButtonIniciar = new javax.swing.JButton();
         jLabelfondo = new javax.swing.JLabel();
 
@@ -49,7 +56,11 @@ public class Registro extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelsesion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jLabelsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 200, 210));
+        getContentPane().add(jLabelsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 210, 230));
+
+        pass.setBackground(new java.awt.Color(204, 255, 255));
+        pass.setFont(new java.awt.Font("Gadugi", 2, 14)); // NOI18N
+        getContentPane().add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 210, 30));
 
         jButton1.setBackground(new java.awt.Color(0, 0, 51));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -72,13 +83,20 @@ public class Registro extends javax.swing.JFrame {
         jLabel2.setText("PASSWORD:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
 
-        jTextFieldUser.setBackground(new java.awt.Color(204, 255, 255));
-        jTextFieldUser.setFont(new java.awt.Font("Gadugi", 2, 14)); // NOI18N
-        getContentPane().add(jTextFieldUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 210, 30));
+        txtuser.setBackground(new java.awt.Color(204, 255, 255));
+        txtuser.setFont(new java.awt.Font("Gadugi", 2, 14)); // NOI18N
+        txtuser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtuserActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtuser, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 210, 30));
 
-        jPassword.setBackground(new java.awt.Color(204, 255, 255));
-        jPassword.setFont(new java.awt.Font("Gadugi", 0, 14)); // NOI18N
-        getContentPane().add(jPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 210, 30));
+        jButtonIniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIniciarActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 490, 130, 40));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
@@ -91,6 +109,39 @@ public class Registro extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButtonIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIniciarActionPerformed
+        // TBotton Registro
+         //línea 1-instanciamos un objeto de la clase Formulario2.java
+          
+        Aerolinea verformulario1=new Aerolinea(); 
+ 
+         //línea 2-hacemos visible el formulario que queremos llamar 
+        String con=new String (pass.getPassword());
+    
+        if (txtuser.getText().equals(User)&& con.equals(Contrasena) ){
+           
+             verformulario1.setVisible(true);
+             dispose();
+            
+        }else {
+        JOptionPane.showMessageDialog(null,"ERROR contra","ERROR",JOptionPane.ERROR_MESSAGE);
+         txtuser.setText(null);
+         pass.setText(null);
+         txtuser.requestFocus();
+        }
+        
+        
+       
+        
+        
+        
+        
+    }//GEN-LAST:event_jButtonIniciarActionPerformed
+
+    private void txtuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtuserActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtuserActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,7 +209,7 @@ public class Registro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelfondo;
     private javax.swing.JLabel jLabelsesion;
-    private javax.swing.JPasswordField jPassword;
-    private javax.swing.JTextField jTextFieldUser;
+    private javax.swing.JPasswordField pass;
+    private javax.swing.JTextField txtuser;
     // End of variables declaration//GEN-END:variables
 }

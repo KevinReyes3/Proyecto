@@ -17,14 +17,46 @@ public class Persona {
      
     }
      public Persona(String nomb,String ape,String Dire,String user,String CorrEle,String pass,int edad,String dui ){
-         this.Dui=dui;
-        this.nombre=nomb;
-        this.apellidos=ape;
-        this.Direccion=Dire;
-        this.correo=CorrEle;
-        this.usuario=user;
-        this.Contra=pass;
-        this.Edad=edad;
+         this.Dui=null;
+        this.nombre=null;
+        this.apellidos=null;
+        this.Direccion=null;
+        this.correo=null;
+        this.usuario=null;
+        this.Contra=null;
+        this.Edad=0;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public void setEdad(int Edad) {
+        this.Edad = Edad;
+    }
+
+    public void setDireccion(String Direccion) {
+        this.Direccion = Direccion;
+    }
+
+    public void setDui(String Dui) {
+        this.Dui = Dui;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public void setContra(String Contra) {
+        this.Contra = Contra;
     }
      public String getnombre(){
         return nombre;
@@ -50,7 +82,25 @@ public class Persona {
      public String getcontra(){
         return Contra;
         }
-     
+     public String getDatos(){
+        return "Dui: "+Dui +
+                "\nNombre "+nombre +
+                "\nApellido "+apellidos+
+                "\nEdad "+Edad+
+                "\nDireccion "+Direccion+
+                "\nCorreo "+correo+
+                "\nUusario "+usuario+
+                "\nContraseña "+Contra
+                ;
+    }
+}
+
+
+
+/**
+ *
+ * 
+ 
      public void registrarUsuario(){
          int men1;
          men1=1;
@@ -102,3 +152,4 @@ public class Persona {
          }
      }
 }
+*/

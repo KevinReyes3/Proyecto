@@ -27,10 +27,83 @@ public class Boletos {
         this.precio=pre;
    
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCodBoleto() {
+        return CodBoleto;
+    }
+
+    public void setCodBoleto(String CodBoleto) {
+        this.CodBoleto = CodBoleto;
+    }
+
+    public String getCodAvion() {
+        return CodAvion;
+    }
+
+    public void setCodAvion(String CodAvion) {
+        this.CodAvion = CodAvion;
+    }
+
+    public int getAsiento() {
+        return Asiento;
+    }
+
+    public void setAsiento(int Asiento) {
+        this.Asiento = Asiento;
+    }
+
+    public String getDestino() {
+        return Destino;
+    }
+
+    public void setDestino(String Destino) {
+        this.Destino = Destino;
+    }
+
+    public String getVueloIda() {
+        return VueloIda;
+    }
+
+    public void setVueloIda(String VueloIda) {
+        this.VueloIda = VueloIda;
+    }
+
+    public String getVueloVenida() {
+        return VueloVenida;
+    }
+
+    public void setVueloVenida(String VueloVenida) {
+        this.VueloVenida = VueloVenida;
+    }
+
+    public String getClaseViaje() {
+        return ClaseViaje;
+    }
+
+    public void setClaseViaje(String ClaseViaje) {
+        this.ClaseViaje = ClaseViaje;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+    
     public String getnombre(){
         return nombre;
         }
-      public void registrarBoleto(){
+    /*  public void registrarBoleto(){
          int men1;
          men1=1;
          int reswhi;
@@ -80,7 +153,28 @@ public class Boletos {
             } else {
             men1=1;
             } 
+        private String nombre;
+    private String CodBoleto;
+    private String CodAvion;
+    private int Asiento;
+    private String Destino;
+    private String VueloIda;
+    private String VueloVenida;
+    private String ClaseViaje;
+    private double precio;
          }
          }
-     }
+     }*/
+        public String getDatos(){
+        return "Codigo_Boleto: "+CodBoleto+
+                "\nNombre "+nombre +
+                "\nCodigo_Avion "+CodAvion+
+                "\nAsiento "+Asiento+
+                "\nDestino "+Destino+
+                "\nVuelo_Ida "+VueloIda+
+                "\nVuelo_Venida "+VueloVenida+
+                "\nClase_Viaje "+ClaseViaje+
+                "\nPrecio "+precio
+                ;
+    }
 }

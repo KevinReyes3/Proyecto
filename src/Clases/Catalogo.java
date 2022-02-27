@@ -18,6 +18,10 @@ public class Catalogo {
     public  Catalogo(String _vuelos){
         this.Vuelos=_vuelos;
     }
+
+    Catalogo(String Viaje, String Promociones, String DestinoAn) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     //Metodos
      public String getVuelos(){
@@ -118,6 +122,14 @@ public class Catalogo {
        
         }
             
+    }
+
+    Object getViajes() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    Object getDestinoAn() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
