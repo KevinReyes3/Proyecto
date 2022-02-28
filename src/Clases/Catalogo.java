@@ -1,64 +1,58 @@
 
 package Clases;
+
 import java.util.Scanner;
+
+
 public class Catalogo {
-     //Atributos 
-    String Vuelos ;
-    String Promociones;
-    String DestinosAn;
-    int destino;
     
-//constructor
-    public Catalogo(){
-        Vuelos=" \n 1-España \n 2-Nicaragua \n 3-Elsalvador";
-        Promociones="";
-        DestinosAn="";
-        int destino;
-    }
-    public  Catalogo(String _vuelos){
-        this.Vuelos=_vuelos;
+    private String Viajes;
+    private String Promociones;
+    private String DestinoAn;
+
+    public Catalogo(String Viajes, String Promociones, String DestinoAn) {
+        this.Viajes = Viajes;
+        this.Promociones = Promociones;
+        this.DestinoAn = DestinoAn;
     }
 
-    Catalogo(String Viaje, String Promociones, String DestinoAn) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    Catalogo() {
     }
-    
-    //Metodos
-     public String getVuelos(){
-         return this.Vuelos;
-    }
-     
-    public void setVuelos(String _vuelos){
-        this.Vuelos=_vuelos;
-    }
+
     
     
-    public String getPromociones(){
-     return this.Promociones;
+    public String getViajes() {
+        return Viajes;
     }
-    public void setPromociones(String _promociones){
-        this.Promociones=_promociones;
+
+    public void setViajes(String Viajes) {
+        this.Viajes = Viajes;
     }
-    public String getDestinos(){
-    return this.DestinosAn;
+
+    public String getPromociones() {
+        return Promociones;
     }
-    public void setDestinos(String _promociones){
-        this.DestinosAn=_promociones;
+
+    public void setPromociones(String Promociones) {
+        this.Promociones = Promociones;
+    }
+
+    public String getDestinoAn() {
+        return DestinoAn;
+    }
+
+    public void setDestinoAn(String DestinoAn) {
+        this.DestinoAn = DestinoAn;
     }
     
-   //Metodo para elegir entre las categorias
+       //Metodo para elegir entre las categorias
     public void VuelosM()
     {
-         
-        
+        int destino;
         //esto es para almacenar el numero que se pidio
         Scanner number =new Scanner(System.in);
         //variable para poder almacenar el dato elegido
         int num;
-        System.out.println("Bienvenido, este es nuestro catalogo:");
-        System.out.println("1-Vuelos");
-        System.out.println("2-Promociones");
-        System.out.println("3-Destino Anteriores");
  
         num=number.nextInt();
         //Esto es para comprobar la opcion de categoria que se a elegido y mostrarlo
@@ -70,7 +64,7 @@ public class Catalogo {
         //constructor 
          Scanner destin=new Scanner(System.in);
       //devuelve lugares para viajar
-         System.out.println("Elija hacia adonde le gustaria viajar"+Vuelos);
+         System.out.println("Elija hacia adonde le gustaria viajar"+Viajes);
          
          //escaneo de datos
          destino=destin.nextInt();
@@ -124,12 +118,6 @@ public class Catalogo {
             
     }
 
-    Object getViajes() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    Object getDestinoAn() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
+   
+     
 }

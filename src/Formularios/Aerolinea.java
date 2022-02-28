@@ -4,6 +4,7 @@
  */
 package Formularios;
 
+import Clases.frmCatalogo;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -95,6 +96,8 @@ public class Aerolinea extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+         frmCatalogo verformulario3=new frmCatalogo(); 
+         verformulario3.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
