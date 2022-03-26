@@ -2,7 +2,6 @@
 package Clases;
 
 import java.awt.List;
-
 import Clases.Persona;
 import java.util.ArrayList;
 /**
