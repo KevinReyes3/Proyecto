@@ -268,6 +268,9 @@
     <Component class="javax.swing.JTextField" name="txtcorreo">
     </Component>
     <Component class="javax.swing.JTextField" name="txtusuario">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtusuarioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtcontra">
       <Events>

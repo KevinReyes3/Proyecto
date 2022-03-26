@@ -43,6 +43,7 @@ public class Registro extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabelsesion = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
         pass = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -57,6 +58,9 @@ public class Registro extends javax.swing.JFrame {
 
         jLabelsesion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jLabelsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 210, 230));
+
+        jCheckBox1.setText("VER");
+        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, -1, -1));
 
         pass.setBackground(new java.awt.Color(204, 255, 255));
         pass.setFont(new java.awt.Font("Gadugi", 2, 14)); // NOI18N
@@ -205,6 +209,7 @@ public class Registro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonIniciar;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelfondo;

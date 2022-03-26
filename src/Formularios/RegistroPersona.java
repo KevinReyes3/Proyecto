@@ -92,6 +92,12 @@ public class RegistroPersona extends javax.swing.JFrame {
         txtdireccion.setRows(5);
         jScrollPane1.setViewportView(txtdireccion);
 
+        txtusuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtusuarioActionPerformed(evt);
+            }
+        });
+
         txtcontra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtcontraActionPerformed(evt);
@@ -420,6 +426,10 @@ public class RegistroPersona extends javax.swing.JFrame {
         txtcontra.setText(null);
         txtdui.requestFocus();
     }//GEN-LAST:event_btnlimpiarActionPerformed
+
+    private void txtusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtusuarioActionPerformed
 
     /**
      * @param args the command line arguments

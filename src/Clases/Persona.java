@@ -3,14 +3,14 @@ package Clases;
 import java.util.Scanner;
 
 public class Persona {
-    private String nombre;
-    private String apellidos;
-    private int Edad;
-    private String Direccion;
-    private String Dui;
-    private String usuario;
-    private String correo;
-    private String Contra;
+    protected String nombre;
+    protected String apellidos;
+    protected int Edad;
+    protected String Direccion;
+    protected String Dui;
+    protected String usuario;
+    protected String correo;
+    protected String Contra;
     
    //Constructor 
     public Persona(){
