@@ -43,13 +43,13 @@ public class Registro extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabelsesion = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
         pass = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtuser = new javax.swing.JTextField();
         jButtonIniciar = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jLabelfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -58,9 +58,6 @@ public class Registro extends javax.swing.JFrame {
 
         jLabelsesion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jLabelsesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 210, 230));
-
-        jCheckBox1.setText("VER");
-        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, -1, -1));
 
         pass.setBackground(new java.awt.Color(204, 255, 255));
         pass.setFont(new java.awt.Font("Gadugi", 2, 14)); // NOI18N
@@ -102,6 +99,14 @@ public class Registro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 490, 130, 40));
+
+        jButton2.setText("REGISTRATE");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 490, -1, -1));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 532));
@@ -146,6 +151,13 @@ public class Registro extends javax.swing.JFrame {
     private void txtuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtuserActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtuserActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+         RegistrarLogin verformulario3=new RegistrarLogin();
+         verformulario3.setVisible(true);
+             dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,8 +220,8 @@ public class Registro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonIniciar;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelfondo;

@@ -9,12 +9,14 @@ import javax.swing.JOptionPane;
 
 public class RegistroPersona extends javax.swing.JFrame {
     public ArrayList<Persona> listaPersona;
-
+    
+    
 
     public RegistroPersona() {
         initComponents();
         listaPersona=new ArrayList<>();
         this.setLocationRelativeTo(null);
+        
     }
     public void listamostrar(){
     DefaultListModel modelo =new DefaultListModel();
@@ -22,7 +24,9 @@ public class RegistroPersona extends javax.swing.JFrame {
         modelo.addElement(listaPersona.get(i).getdui()+" ||  "+listaPersona.get(i).getnombre()+" || "+listaPersona.get(i).getapellidos()+" || "+listaPersona.get(i).getedad()+" || "+listaPersona.get(i).getDireccion()+" || "+listaPersona.get(i).getcorreo()+" || "+listaPersona.get(i).getusuario()+" || "+listaPersona.get(i).getcontra());
     }
     lista.setModel(modelo);
+ 
     }
+   
 
   
     @SuppressWarnings("unchecked")
@@ -309,11 +313,7 @@ public class RegistroPersona extends javax.swing.JFrame {
      edad=txtedad.getText();
          try{
      Edadp=Integer.parseInt(edad);
-     } catch(NumberFormatException e){
-         JOptionPane.showMessageDialog(null,"EL DATO DEBE SER NUMERICO","ERROR",JOptionPane.ERROR_MESSAGE);
-         
-     }
-     Direccionp=txtdireccion.getText();
+      Direccionp=txtdireccion.getText();
      correop=txtcorreo.getText();
      usuariop=txtusuario.getText();
      Contrap=txtcontra.getText();
@@ -337,6 +337,19 @@ public class RegistroPersona extends javax.swing.JFrame {
         txtusuario.setText(null);
         txtcontra.setText(null);
         txtdui.requestFocus();
+     } catch(NumberFormatException e){
+         JOptionPane.showMessageDialog(null,"EL DATO DEBE SER NUMERICO","ERROR",JOptionPane.ERROR_MESSAGE);
+         txtdui.setText(null);
+        txtnombre.setText(null);
+        txtapellido.setText(null);
+        txtedad.setText(null);
+        txtdireccion.setText(null);
+        txtcorreo.setText(null);
+        txtusuario.setText(null);
+        txtcontra.setText(null);
+        txtdui.requestFocus();
+     }
+    
     
      
     }//GEN-LAST:event_btnagregarActionPerformed
@@ -344,6 +357,7 @@ public class RegistroPersona extends javax.swing.JFrame {
     private void btnmostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmostrarActionPerformed
         // TODO add your handling code here:
         //String nom = JOptionPane.showInputDialog ( "INGRESE EL NOMBRE A BUSCAR:" );
+        
         int row=lista.getSelectedIndex();
         if (row==-1){
             JOptionPane.showMessageDialog(null,"SELLECIONE UN ELEMENTO DE LA LISTA","AVISO",JOptionPane.INFORMATION_MESSAGE);
@@ -435,6 +449,7 @@ public class RegistroPersona extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -462,6 +477,7 @@ public class RegistroPersona extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new RegistroPersona().setVisible(true);
+                
             }
         });
     }
