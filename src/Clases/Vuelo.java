@@ -45,5 +45,10 @@ public class Vuelo extends Catalogo {
     public void setMdestinos(String Mdestinos) {
         this.Mdestinos = Mdestinos;
     }
-    
+
+    @Override
+    public int Cmbi() {
+        return 0;
+    }
+ 
 }

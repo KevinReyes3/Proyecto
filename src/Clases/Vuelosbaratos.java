@@ -53,6 +53,11 @@ public class Vuelosbaratos extends Catalogo{
     public void setCantidadPasajero(String cantidadPasajero) {
         this.cantidadPasajero = cantidadPasajero;
     }
+
+    @Override
+    public int Cmbi() {
+        return 0;
+    }
         
 
   

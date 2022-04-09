@@ -4,7 +4,7 @@
  */
 package Formularios;
 
-import Clases.frmCatalogo;
+import Formularios.FrmCatalog;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -21,7 +21,9 @@ public class Aerolinea extends javax.swing.JFrame {
    
     public Aerolinea() {
         initComponents();
-         
+        this.setSize(700, 700);
+        
+        this.setTitle("MENU PRINCIPAL");
         initComponents();
         this.setLocationRelativeTo(null);
         this.Imagen(this.jLabelfondo, "src/imagenes/fondo2.jpg");
@@ -37,33 +39,24 @@ public class Aerolinea extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem1 = new javax.swing.JMenuItem();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         jLabelfondo = new javax.swing.JLabel();
 
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButton1.setBackground(new java.awt.Color(254, 160, 47));
-        jButton1.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("USUARIOS");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 180, 50));
 
         jButton2.setBackground(new java.awt.Color(254, 160, 47));
         jButton2.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("BOLETOS");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 180, 50));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 180, 50));
 
         jButton3.setBackground(new java.awt.Color(254, 160, 47));
         jButton3.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
@@ -74,13 +67,27 @@ public class Aerolinea extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 180, 50));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 180, 50));
 
         jButton4.setBackground(new java.awt.Color(254, 160, 47));
         jButton4.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("COMPAÑIA");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 180, 50));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 180, 50));
+
+        jButton1.setBackground(new java.awt.Color(254, 160, 47));
+        jButton1.setFont(new java.awt.Font("Cambria", 3, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("USUARIOS");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 180, 50));
+
+        jPanel1.setBackground(new java.awt.Color(34, 45, 49));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 210, 410));
 
         jLabelfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo2.jpg"))); // NOI18N
         getContentPane().add(jLabelfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 410));
@@ -96,7 +103,7 @@ public class Aerolinea extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-         frmCatalogo verformulario3=new frmCatalogo(); 
+         FrmCatalog verformulario3=new FrmCatalog(); 
          verformulario3.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -142,6 +149,7 @@ public class Aerolinea extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabelfondo;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 
     private void Imagen(JLabel jLabelfondo, String ruta) {

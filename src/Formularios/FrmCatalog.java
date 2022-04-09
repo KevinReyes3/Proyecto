@@ -34,6 +34,7 @@ public class FrmCatalog extends javax.swing.JFrame {
         btnVuelos = new javax.swing.JButton();
         btnVuelosb = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
+        btnBoletos = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -53,7 +54,7 @@ public class FrmCatalog extends javax.swing.JFrame {
                 btnVuelosActionPerformed(evt);
             }
         });
-        jPanel1.add(btnVuelos, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 170, 80));
+        jPanel1.add(btnVuelos, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 170, 90));
 
         btnVuelosb.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnVuelosb.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Slide Shows/Vuelosbaratos.png"))); // NOI18N
@@ -63,7 +64,7 @@ public class FrmCatalog extends javax.swing.JFrame {
                 btnVuelosbActionPerformed(evt);
             }
         });
-        jPanel1.add(btnVuelosb, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, 210, 90));
+        jPanel1.add(btnVuelosb, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 210, 90));
 
         btnSalir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Slide Shows/sal.png"))); // NOI18N
@@ -74,6 +75,15 @@ public class FrmCatalog extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 330, 140, 80));
+
+        btnBoletos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnBoletos.setText("Boletos");
+        btnBoletos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBoletosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnBoletos, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 140, 150, 90));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Slide Shows/Vuelos-baratos-para-Nueva-Zelanda-1080x675 (2).jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -106,6 +116,11 @@ public class FrmCatalog extends javax.swing.JFrame {
         frmVuelosbaratos baratos=new frmVuelosbaratos();
         baratos.setVisible(true);
     }//GEN-LAST:event_btnVuelosbActionPerformed
+
+    private void btnBoletosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBoletosActionPerformed
+        frmNuevoC mostrar=new frmNuevoC();
+        mostrar.setVisible(true);
+    }//GEN-LAST:event_btnBoletosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,6 +158,7 @@ public class FrmCatalog extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBoletos;
     private javax.swing.JButton btnSalir;
     private javax.swing.JButton btnVuelos;
     private javax.swing.JButton btnVuelosb;

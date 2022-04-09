@@ -2,7 +2,7 @@
 package Clases;
 
 
-public class Catalogo {
+public abstract class  Catalogo {
     private String Destinos;
     private String Ida;
     private String Vuelta;
@@ -59,7 +59,7 @@ public class Catalogo {
         this.Vuelta = Vuelta;
     }
 
-       
+       public abstract int Cmbi();
     
     
 }
