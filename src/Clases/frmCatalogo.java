@@ -160,7 +160,12 @@ public class frmCatalogo extends javax.swing.JFrame {
       String Promociones=txtPromociones.getText();
       String DestinoAn=txtDestinoAn.getText();
       
-      Catalogo clasecatalogo=new Catalogo(Viaje,Promociones,DestinoAn);
+      Catalogo clasecatalogo=new Catalogo(Viaje,Promociones,DestinoAn) {
+          @Override
+          public int Cmbi() {
+              throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+          }
+      };
       contenedor.add(clasecatalogo);
       //Limpiadores de campos
       txtViajes.setText("");
@@ -183,7 +188,12 @@ public class frmCatalogo extends javax.swing.JFrame {
         String Promociones=txtPromociones.getText();
         String DestinoAn=txtDestinoAn.getText();
         
-        Catalogo a=new Catalogo(Viaje,Promociones,DestinoAn);
+        Catalogo a=new Catalogo(Viaje,Promociones,DestinoAn) {
+            @Override
+            public int Cmbi() {
+                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+            }
+        };
         contenedor.set(buscar,a);
         //limpiar despues de modificar un dato
         txtViajes.setText("");

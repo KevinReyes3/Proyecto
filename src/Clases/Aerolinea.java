@@ -7,7 +7,12 @@ public class Aerolinea {
     public static void main (String[] args){
         Persona registrarUsuario=new Persona();
         Boletos registarBoletos= new Boletos();
-        Catalogo vercatalogo=new Catalogo();
+        Catalogo vercatalogo=new Catalogo() {
+            @Override
+            public int Cmbi() {
+                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+            }
+        };
         Companhia vercompanhia=new Companhia();
          Scanner numper=new Scanner(System.in);
          /*
