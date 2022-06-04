@@ -4,6 +4,7 @@ package Clases;
 import Clases.Vuelosbaratos;
 import Clases.frmTablaDatos;
 import java.util.LinkedList;
+import javax.swing.JOptionPane;
 
 public class frmVuelosbaratos extends javax.swing.JFrame {
         public static LinkedList contenedor=new LinkedList();
@@ -13,6 +14,67 @@ public class frmVuelosbaratos extends javax.swing.JFrame {
     public frmVuelosbaratos() {
         initComponents();
     }
+    
+    public void Validar()
+    {
+     
+            if (txtOrigen.getText().isEmpty())
+            {
+                lblOrigen.setText("Por Favor complete los campos");
+                if (txtDestino.getText().isEmpty())
+                {
+                    lblDestino.setText("Por Favor complete los campos");
+                    if (cboTipo.getSelectedIndex()!=1)
+                    {
+                        lblTipopasajero.setText("Por Favor complete los campos");
+                        if (cboCantidad.getSelectedIndex() !=1)
+                        {
+                            lblCantidad.setText("Por Favor complete los campos");
+                        }else{
+                          lblCantidad.setText("");
+                        }
+ 
+                    }else{
+                         lblTipopasajero.setText("");
+                    }
+                }else{
+                      lblDestino.setText("");
+                }
+            }else{
+                lblOrigen.setText("");
+            }
+      
+    }
+    
+//    public void Validar(){
+//  try{
+//    if (txtOrigen.getText().isEmpty()) {
+//        lblOrigen.setText("Por favor completar el campo");
+//    }else{
+//        lblOrigen.setText("");
+//    }
+//        if (txtDestino.getText().isEmpty())
+//        {
+//            lblDestino.setText("Por favor completar el campo");
+//        }else  {
+//            lblDestino.setText("");
+//            JOptionPane.showMessageDialog(this,"Por favor Complete Todos los Campos","Mensaje de Error", JOptionPane.ERROR_MESSAGE);
+//        }
+//     
+//     
+//        if (cboTipo.getSelectedIndex()!=0)
+//        {
+//            
+//        }else{
+//           JOptionPane.showMessageDialog(this,"Por favor Complete Todos los Campos","Mensaje de Error", JOptionPane.ERROR_MESSAGE);
+//        }
+//  }catch(Exception e){
+//      JOptionPane.showMessageDialog(this, e.getMessage());
+//  }
+//          
+//}
+    
+      
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -27,6 +89,10 @@ public class frmVuelosbaratos extends javax.swing.JFrame {
         txtDestino = new javax.swing.JTextField();
         cboCantidad = new javax.swing.JComboBox<>();
         cboTipo = new javax.swing.JComboBox<>();
+        lblDestino = new javax.swing.JLabel();
+        lblCantidad = new javax.swing.JLabel();
+        lblTipopasajero = new javax.swing.JLabel();
+        lblOrigen = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         btnElimina = new javax.swing.JButton();
         btnModifica = new javax.swing.JButton();
@@ -60,9 +126,18 @@ public class frmVuelosbaratos extends javax.swing.JFrame {
         jLabel5.setText("Cantidad de Pasajeros:");
         jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
 
-        cboCantidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
+        cboCantidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-SELECCIONE-", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
 
-        cboTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Adultos", "Niños", "Bebés", " " }));
+        cboTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-SELECCIONE-", "Adultos", "Niños", "Bebés", " " }));
+
+        lblDestino.setForeground(new java.awt.Color(204, 0, 0));
+
+        lblCantidad.setForeground(new java.awt.Color(204, 0, 0));
+
+        lblTipopasajero.setForeground(new java.awt.Color(204, 0, 0));
+
+        lblOrigen.setFont(new java.awt.Font("Dialog", 0, 10)); // NOI18N
+        lblOrigen.setForeground(new java.awt.Color(204, 0, 0));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -70,19 +145,38 @@ public class frmVuelosbaratos extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(txtDestino, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                        .addComponent(txtOrigen, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addGap(59, 59, 59)
+                    .addComponent(txtDestino, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                    .addComponent(txtOrigen))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(cboCantidad, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cboTipo, 0, 206, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(lblDestino, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblOrigen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(120, 120, 120))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(106, 106, 106))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(cboTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblTipopasajero, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap()))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(cboCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(lblCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addContainerGap()))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -94,15 +188,21 @@ public class frmVuelosbaratos extends javax.swing.JFrame {
                 .addGap(13, 13, 13)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cboTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cboTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblTipopasajero, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblOrigen))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cboCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDestino, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(cboCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblDestino)))
+                    .addComponent(lblCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -201,9 +301,8 @@ public class frmVuelosbaratos extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,7 +326,7 @@ public class frmVuelosbaratos extends javax.swing.JFrame {
         String Destinos=txtDestino.getText();
         String Vuelta=(String) cboTipo.getSelectedItem();
         String cantidadPasajero=(String) cboCantidad.getSelectedItem();
-//        String Vuelta="";
+
         
 
         Vuelosbaratos a=new Vuelosbaratos(Ida,Destinos,cantidadPasajero,Vuelta);
@@ -240,6 +339,7 @@ public class frmVuelosbaratos extends javax.swing.JFrame {
     }//GEN-LAST:event_btnModificaActionPerformed
 
     private void btnGuardaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardaActionPerformed
+       Validar();
         String Ida=txtOrigen.getText();
         String Destinos=txtDestino.getText();
         String Vuelta=(String) cboTipo.getSelectedItem();
@@ -314,7 +414,15 @@ public class frmVuelosbaratos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lblCantidad;
+    private javax.swing.JLabel lblDestino;
+    private javax.swing.JLabel lblOrigen;
+    private javax.swing.JLabel lblTipopasajero;
     private javax.swing.JTextField txtDestino;
     private javax.swing.JTextField txtOrigen;
     // End of variables declaration//GEN-END:variables
+
+    public void Validar(Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
